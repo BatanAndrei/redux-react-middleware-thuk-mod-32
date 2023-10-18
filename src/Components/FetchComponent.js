@@ -1,10 +1,12 @@
 import { fetchAction } from '../Actions/fetchAction';
-import { useDispatch} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
 
 function FetchComponent() {
    const dispatch = useDispatch();
+   let resTodos = [];
+   resTodos = useSelector((state) => state?.todos[0]);
    
     useEffect(() => {
     dispatch(fetchAction())
@@ -13,7 +15,7 @@ function FetchComponent() {
     return(
         <>
             <div>
-               {}
+               {resTodos?.map((tod) => <div key={tod.id}>* {tod.title}</div>)}
             </div>
         </>
     )
