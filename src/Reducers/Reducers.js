@@ -10,10 +10,10 @@ export function Reducer(state = initialState, action) {
         case INIT_TODOS: {
             return{
                 ...state,
-                todos: [...state.todos, action.payload] 
+                todos: [action.payload] 
             }
         } 
     }
 }
 
-export const addManyCustomersAction = (todos) => ({ type: INIT_TODOS, payload: todos }) 
+export const addManyCustomersAction = (todos) => ({ type: INIT_TODOS, payload: todos}) 

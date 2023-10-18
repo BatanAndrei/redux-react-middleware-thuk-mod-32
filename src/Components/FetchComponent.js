@@ -1,18 +1,20 @@
 import { fetchAction } from '../Actions/fetchAction';
-import { useDispatch } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { useEffect } from 'react';
 
 
-function FetchComponent() {
+function FetchComponent({store}) {
    const dispatch = useDispatch();
-   //const todos = useSelector((state) => state.todos)
-
-   useEffect(() => {
+   
+    useEffect(() => {
     dispatch(fetchAction());
 }, [])
+
     return(
         <>
-            <button onClick={() => dispatch(fetchAction())}>Get users</button>
+            <div>
+               {}
+            </div>
         </>
     )
 }

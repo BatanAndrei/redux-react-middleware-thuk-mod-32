@@ -5,6 +5,6 @@ export const fetchAction = () => {
         fetch('https://jsonplaceholder.typicode.com/todos')
         .then(response => response.json())
         .then(json => {dispatch(addManyCustomersAction(json));
-             console.log('current state:', getState().todos)})
-    }
+        console.log('current state', getState())})
+        }
     }
