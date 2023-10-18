@@ -3,11 +3,11 @@ import { useDispatch} from 'react-redux';
 import { useEffect } from 'react';
 
 
-function FetchComponent({store}) {
+function FetchComponent() {
    const dispatch = useDispatch();
    
     useEffect(() => {
-    dispatch(fetchAction());
+    dispatch(fetchAction())
 }, [])
 
     return(
