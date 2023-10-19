@@ -1,6 +1,7 @@
 import { fetchAction } from '../Actions/fetchAction';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import  Style  from './FetchComponentStyle.module.css';
 
 
 function FetchComponent() {
@@ -14,9 +15,13 @@ function FetchComponent() {
 
     return(
         <>
-            <div>
-               {resTodos?.map((tod) => <div key={tod.id}>* {tod.title}</div>)}
-            </div>
+            {resTodos?.map((tod) => 
+                <>
+                    <div className={Style.position}>
+                        <div className={Style.gap} key={tod.id}>id: {tod.id} -</div>
+                        <div className={Style.color} key={tod.id}>{tod.title}</div>
+                    </div>
+               </>)}
         </>
     )
 }

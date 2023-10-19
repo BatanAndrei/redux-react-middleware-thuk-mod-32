@@ -1,0 +1,14 @@
+.position {
+    display: flex;
+    justify-content: center;
+}
+
+.gap {
+   margin-right: 10px;
+   font-weight: 500;
+}
+
+.color {
+    color: crimson;
+    font-weight: 400;
+}
